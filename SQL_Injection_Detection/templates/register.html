@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Registration</title>
+
+    <style>
+        body{
+            font-family:Arial,sans-serif;
+            background:#f4f6f9;
+            margin:0;
+            padding:0;
+        }
+
+        .container{
+            width:450px;
+            margin:60px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            text-align:center;
+            color:#333;
+        }
+
+        .security-box{
+            background:#eef4ff;
+            border-left:5px solid #0078d7;
+            padding:10px;
+            margin-bottom:20px;
+            border-radius:5px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-top:10px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            box-sizing:border-box;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            border:none;
+            background:#28a745;
+            color:white;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#218838;
+        }
+
+        .message{
+            text-align:center;
+            font-weight:bold;
+            color:red;
+        }
+
+        .link{
+            text-align:center;
+            margin-top:15px;
+        }
+
+        a{
+            text-decoration:none;
+            color:#0078d7;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Secure User Registration</h1>
+
+    <div class="security-box">
+        <strong>Security Features:</strong>
+        <ul>
+            <li>AES Encryption Enabled</li>
+            <li>SQL Injection Detection Active</li>
+            <li>Capability Code Validation</li>
+            <li>Double Layer Security Protection</li>
+        </ul>
+    </div>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Enter Username"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            required
+        >
+
+        <input
+            type="text"
+            name="capability"
+            placeholder="Enter Capability Code"
+            required
+        >
+
+        <button type="submit">
+            Register User
+        </button>
+
+    </form>
+
+    <p class="message">
+        {{ message }}
+    </p>
+
+    <div class="link">
+        Already have an account?
+        <a href="/login">Login Here</a>
+    </div>
+
+</div>
+
+</body>
+</html>
